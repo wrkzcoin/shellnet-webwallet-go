@@ -96,14 +96,15 @@ body {
   color: #04A148;
 }
 .hello-user {
-  color: #ED9E12;
+  color: #FEFEFE;
+  font-weight: 500;
   font-size: 18px;
   padding: 8px 16px 24px 16px;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 .landing-logo {
-    height: 40px;
+    height: 80px;
     width: auto;
     margin-top: 16px;
     margin-bottom: 4px;
