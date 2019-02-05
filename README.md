@@ -1,6 +1,6 @@
 # Shellnet
 
-![screenshot](/docs/screenshot-login.png)
+![screenshot](/docs/screenshot-shellnet.png)
 
 ## Setup on Ubuntu 16.04+
 Install the required packages.  
