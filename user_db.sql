@@ -7,5 +7,5 @@ CREATE TABLE accounts (
 	username VARCHAR(64) NOT NULL UNIQUE,
 	id  SERIAL PRIMARY KEY,
 	totp VARCHAR(160) DEFAULT '',
-	address CHAR(99) NOT NULL
+	address CHAR(98) NOT NULL
 );

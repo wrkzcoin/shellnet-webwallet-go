@@ -4,7 +4,7 @@ CREATE DATABASE tx_history;
 
 CREATE TABLE addresses (
 	id SERIAL NOT NULL PRIMARY KEY,
-	address CHAR(99) NOT NULL UNIQUE,
+	address CHAR(98) NOT NULL UNIQUE,
 	blockHeight INT DEFAULT 1
 );
 
