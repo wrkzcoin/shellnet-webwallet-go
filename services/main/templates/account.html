@@ -67,11 +67,11 @@
             </tr>
             <tr>
               <th>Available</th>
-              <td><span id="available_balance">{{ printf "%.2f" (index .TWallet.Balance.Unlocked) }}</span> TRTL</td>
+              <td><span id="available_balance">{{ printf "%.2f" (index .TWallet.Balance.Unlocked) }}</span> WRKZ</td>
             </tr>
             <tr>
               <th>Locked / Unconfirmed</th>
-              <td><span id="locked_amount">{{ printf "%.2f" (index .TWallet.Balance.Locked) }}</span> TRTL</td>
+              <td><span id="locked_amount">{{ printf "%.2f" (index .TWallet.Balance.Locked) }}</span> WRKZ</td>
             </tr>
             <tr>
               <th>Address</th>
@@ -91,7 +91,7 @@
             <h2>Send Transaction</h2><br>
             <span class="caret-icon"></span>
             <input id="send_to" type="text" name="destination" placeholder="Enter destination address..."
-              pattern="^TRTL([a-zA-Z0-9]{95}|[a-zA-Z0-9]{183})\s*$" {{ if index .TData "url_params" "address"}}
+              pattern="^Wrkz([a-zA-Z0-9]{94}|[a-zA-Z0-9]{182})\s*$" {{ if index .TData "url_params" "address"}}
               value="{{ index .TData "url_params" "address" 0 }}" {{ end }} required />
             <span class="amount-icon"></span>
             <input id="send_amount" type="text" name="amount" placeholder="Enter Amount.." pattern="^\d+\.{0,1}\d{0,2}$"
@@ -152,8 +152,8 @@
                 {{ else }}
                 <td><strong>Deposit</strong></td>
                 {{ end }}
-		<td><b>Hash</b><br><a href="https://explorer.turtlecoin.lol/transaction.html?hash={{ $ele.Hash }}">{{ $ele.Hash }} </a><br><b>PaymentId</b><br>"{{ index $ele.PaymentID }}"</td>
-                <td><b>Amount</b><br>{{ index $ele.Amount }}&nbsp;TRTL</td>
+		<td><b>Hash</b><br><a href="https://myexplorer.wrkz.work/transaction.html?hash={{ $ele.Hash }}">{{ $ele.Hash }} </a><br><b>PaymentId</b><br>"{{ index $ele.PaymentID }}"</td>
+                <td><b>Amount</b><br>{{ index $ele.Amount }}&nbsp;WRKZ</td>
               </tr>
               {{ end }}
             </tbody>
@@ -177,9 +177,9 @@
     <div class="light-modal-content">
       <a href="#" class="light-modal-close-icon" aria-label="close">&times;</a>
       <div class="light-modal-body">
-        <p>Please donate to support the development and operation of Shellnet</p>
+        <p>Please donate to support the development and operation</p>
         <p style="word-break: break-all;">
-          TRTLuwxCr6w3pVUcSW1UkbjiCccYknCrN88CuKq9xWLccKTpJDoWQXgcfsazXLpmSzBhcTg8Pb8XgSiiBjDpxfHq7MmHECa1CHg
+          WrkzRNDQDwFCBynKPc459v3LDa1gEGzG3j962tMUBko1fw9xgdaS9mNiGMgA9s1q7hS1Z8SGRVWzcGc8Sh8xsvfZ6u2wJEtoZB
         </p>
       </div>
     </div>

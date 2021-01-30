@@ -2,8 +2,7 @@ package main
 
 const (
 	// Forking config.
-	divisor        = 100 // This is 100 for TRTL
-	transactionFee = 10  // This is 10 for TRTL
+	divisor        = 100 // This is 100 for WRKZ
 	// walllet api connection
 	walletAPIKey  = ""
 	walletAPIPort = "8070"
