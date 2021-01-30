@@ -3,23 +3,23 @@ const tickerSymbol = 'WRKZ';
 const decimalPlaces = 2;
 
 // Wallet update interval in milliseconds. Probably don't need to change this.
-const updateInterval = 5000;
+const updateInterval = 15000;
 
 function setWalletStatus () {
     let wallet_info = httpGet("/account/wallet_info");
-    let availableBalance = parseFloat(wallet_info.Data.balance.availableBalance).toFixed(decimalPlaces);
-    let lockedAmount = parseFloat(wallet_info.Data.balance.lockedAmount).toFixed(decimalPlaces);
-    let knownBlockCount = wallet_info.Data.status.knownBlockCount;
-    let blockCount = wallet_info.Data.status.blockCount;
+    let availableBalance = parseFloat(wallet_info.balance.unlocked).toFixed(decimalPlaces);
+    let lockedAmount = parseFloat(wallet_info.balance.locked).toFixed(decimalPlaces);
+    let knownBlockCount = wallet_info.status.networkBlockCount;
+    let blockCount = wallet_info.status.walletBlockCount;
 
-    if ((knownBlockCount - blockCount < THRESHOLD) && (blockCount > 1)) {
+    if ((Math.abs(knownBlockCount - blockCount) < THRESHOLD) && (blockCount > 1)) {
       document.getElementById("wallet_status").className = "green-input";
     } else {
       document.getElementById("wallet_status").className = "orange-input";
     }
 
-    document.getElementById("available_balance").textContent = `${availableBalance} ${tickerSymbol}`;
-    document.getElementById("locked_amount").textContent = `${lockedAmount} ${tickerSymbol}`;
+    document.getElementById("available_balance").textContent = `${availableBalance}`;
+    document.getElementById("locked_amount").textContent = `${lockedAmount}`;
     document.getElementById("block_count").textContent = blockCount + "/" + knownBlockCount;
     console.log("checking wallet...");
   }

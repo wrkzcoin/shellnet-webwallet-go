@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://unpkg.com/unnamed" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="/assets/css/main.css"/>
-        <link rel="icon" href="/assets/images/fav_icon.ico" type="image/x-icon">
-        <title>WRKZ Web Wallet</title>
-    </head>
-    <body>
-        <div class="full-container">
-            <div class="content">
-                <div class="content-panel">
-                    <!-- Use this for just text -->
-                    <!--<span class="title landing-title">SHELLNET</span>-->
-                    <!-- Use this for brand logo -->
-                    <img src="/assets/images/brand-logo.png" class="landing-logo"></img>
-                    <span class="tagline">A secure, easy-to-use wallet for WrkzCoin payments</span>
-                    {{ if .User }}
-                        <span class="hello-user">Hello {{ .User.Username }}</span>
-    		            <a href="/account"><button class="btn btn-primary button-green">account</button></a>
-    		            <a href="/logout" class="signup-link"><span>logout</span></a>
-                    {{ else }}
-                    <a href="/login"><button class="btn btn-primary button-green">login</button></a>
-                    <a href="/signup" class="signup-link"><span>create an account</span></a>
-                    {{ end }}
-                </div>
-            </div>
+<!doctype html>
+<html>
+
+<head>
+    <title>Shellnet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/images/fav_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/unnamed" />
+    <link rel="stylesheet" href="/assets/css/light-modal.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="title"><a href="/">SHELLNET</a></h1>
+    </header>
+    <div id="main-container">
+        <div id="body">
+         <h1>{{ .Error }}</h1>
+         <h2>HTTP {{ .HTTPCode }}</h2>
         </div>
     </div>
     <footer>
